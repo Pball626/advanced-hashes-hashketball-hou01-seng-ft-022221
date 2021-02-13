@@ -180,4 +180,11 @@ def player_stats (player_name)
   end
 end
  
- 
+ def big_shoe_rebounds
+  players = game_hash[:home][:players].concat(game_hash[:away][:players])
+  players.each do |inner_value|
+    if inner_value[:shoe] > 18
+      return inner_value[:rebounds]
+      end
+    end
+end
