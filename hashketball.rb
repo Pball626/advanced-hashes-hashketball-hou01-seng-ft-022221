@@ -166,9 +166,5 @@ def player_stats (player_name)
     end
   end
 end
-  # player_name = [game_hash[:home][:players], [game_hash[:away][:players]]
-  # binding.pry
-
-  # game_hash.each do |key, value|
-  #   if value[:players].each_with_index == player_name
-  #     puts [:players] 
+ 
+ 
