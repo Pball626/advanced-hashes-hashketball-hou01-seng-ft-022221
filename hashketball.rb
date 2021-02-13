@@ -154,7 +154,20 @@ def team_names
   [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
-def player_numbers (team_name)
+def player_numbers(team_name)
+  numbers = []
+  game_hash.each do |key, value|
+    if value[:team_name] == team_name
+      value.each do |key, value|
+    if key == :players
+      value.each do |player|
+    numbers.push(player[:number])
+          end
+        end
+      end
+    end
+  end
+  return numbers
 end
 
 def player_stats (player_name)
